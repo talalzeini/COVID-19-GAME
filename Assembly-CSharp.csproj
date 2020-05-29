@@ -53,8 +53,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\followPlayer.cs" />
      <Compile Include="Assets\Scripts\gameManager.cs" />
+     <Compile Include="Assets\Scripts\NextSpawn.cs" />
      <Compile Include="Assets\Scripts\playerScript.cs" />
+     <Compile Include="Assets\Scripts\Rotater.cs" />
+     <Compile Include="Assets\Scripts\Score.cs" />
+     <Compile Include="Assets\Scripts\Spawner.cs" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>/Users/talalzeini/Desktop/Games/COVID-19/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>
