@@ -1288,6 +1288,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ce91cfc8e0124dfc9669ab9cd1ece8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PausedPanel: {fileID: 0}
+  losePanel: {fileID: 0}
+  lose: {fileID: 0}
+  PauseIcon: {fileID: 0}
 --- !u!4 &515497977
 Transform:
   m_ObjectHideFlags: 0
@@ -3217,7 +3221,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 515497976}
-        m_MethodName: TryAgain
+        m_MethodName: MenuToLevels
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

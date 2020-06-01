@@ -6,6 +6,9 @@ using UnityEngine.SceneManagement;
 public class gameManager : MonoBehaviour
 {
   public GameObject PausedPanel;
+  public GameObject losePanel;
+  public AudioSource lose;
+
   public GameObject PauseIcon;
   public void TryAgain(){
        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
@@ -14,6 +17,9 @@ public class gameManager : MonoBehaviour
    public void MenuToGame(){
        SceneManager.LoadScene("Game");
        Time.timeScale = 1f;
+   }
+    public void MenuToLevels(){
+       SceneManager.LoadScene("Levels");
    }
     public void GameToMenu(){
        SceneManager.LoadScene("Menu");
@@ -28,5 +34,10 @@ public class gameManager : MonoBehaviour
        Time.timeScale = 1f;
        PausedPanel.SetActive(false);
        PauseIcon.SetActive(true);
+   }
+   public void Update(){    
+       if(losePanel.activeSelf == true){
+            lose.enabled = true;
+    }
    }
 }

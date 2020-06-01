@@ -9,6 +9,7 @@ public class NextSpawn : MonoBehaviour
         if (col.CompareTag("Player"))
         {
             Score.score++;
+            Debug.Log("addscore");
         }
     }
 }
