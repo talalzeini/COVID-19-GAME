@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class playerScript : MonoBehaviour
 {
@@ -73,7 +74,6 @@ void OnCollisionEnter2D(Collision2D col){
         winPanel.SetActive(true);
         rb.constraints = RigidbodyConstraints2D.FreezePositionY;
     }
-
 }
 void OnTriggerEnter2D(Collider2D coll){
    if(coll.gameObject.CompareTag("Mask")){

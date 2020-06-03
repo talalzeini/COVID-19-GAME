@@ -56,6 +56,8 @@
      <Compile Include="Assets\Scripts\AdsManager.cs" />
      <Compile Include="Assets\Scripts\followPlayer.cs" />
      <Compile Include="Assets\Scripts\gameManager.cs" />
+     <Compile Include="Assets\Scripts\Levels.cs" />
+     <Compile Include="Assets\Scripts\nextLevel.cs" />
      <Compile Include="Assets\Scripts\NextSpawn.cs" />
      <Compile Include="Assets\Scripts\playerScript.cs" />
      <Compile Include="Assets\Scripts\Rotater.cs" />

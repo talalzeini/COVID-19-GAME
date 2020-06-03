@@ -1672,6 +1672,7 @@ GameObject:
   m_Component:
   - component: {fileID: 515497977}
   - component: {fileID: 515497976}
+  - component: {fileID: 515497978}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -1709,6 +1710,49 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &515497978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 515497975}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a91e56ac997d0446f98fe62dfa633d73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lvlButtons:
+  - {fileID: 2133093326}
+  - {fileID: 2086432663}
+  - {fileID: 1598752882}
+  - {fileID: 435612390}
+  - {fileID: 290515351}
+  - {fileID: 2000331434}
+  - {fileID: 273136614}
+  - {fileID: 2116815384}
+  - {fileID: 441668326}
+  - {fileID: 1255912167}
+  - {fileID: 1883995563}
+  - {fileID: 1058677712}
+  - {fileID: 1984368580}
+  - {fileID: 1201336500}
+  - {fileID: 1890487892}
+  - {fileID: 2031198292}
+  - {fileID: 821817280}
+  - {fileID: 1342533782}
+  - {fileID: 2067511377}
+  - {fileID: 554909319}
+  - {fileID: 1846558449}
+  - {fileID: 602500728}
+  - {fileID: 239584897}
+  - {fileID: 17362672}
+  - {fileID: 294549843}
+  - {fileID: 230950593}
+  - {fileID: 1980615795}
+  - {fileID: 523370575}
+  - {fileID: 652854408}
+  - {fileID: 834240754}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
