@@ -14,6 +14,12 @@ public class gameManager : MonoBehaviour
        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
        Time.timeScale = 1f;
    }
+   public void Back(){
+         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+   }
+    public void Next(){
+         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+   }
    public void MenuToGame(){
        SceneManager.LoadScene("Game");
        Time.timeScale = 1f;

@@ -11,7 +11,7 @@ public class Spawner : MonoBehaviour
 
     public void Update()
     {
-        while(i < 30){
+        while(i < 1){
             i++;
         nextStep += 7;
         Instantiate(PrefabsRoad[Random.Range(0, PrefabsRoad.Length)], new Vector3(startPos.position.x, startPos.position.y + nextStep, startPos.position.z),Quaternion.identity);

@@ -10,6 +10,7 @@ public class NextSpawn : MonoBehaviour
         {
             Score.score++;
             Debug.Log("addscore");
+            Destroy(gameObject);
         }
     }
 }
