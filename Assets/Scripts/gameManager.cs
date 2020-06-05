@@ -46,4 +46,34 @@ public class gameManager : MonoBehaviour
             lose.enabled = true;
     }
    }
+   public void Game1(){
+         SceneManager.LoadScene("Game 1");
+   }
+   public void Game2(){
+         SceneManager.LoadScene("Game 2");
+   }
+   public void Game3(){
+         SceneManager.LoadScene("Game 3");
+   }
+   public void Game4(){
+         SceneManager.LoadScene("Game 4");
+   }
+   public void Game5(){
+         SceneManager.LoadScene("Game 5");
+   }
+   public void Game6(){
+         SceneManager.LoadScene("Game 6");
+   }
+   public void Game7(){
+         SceneManager.LoadScene("Game 7");
+   }
+   public void Game8(){
+         SceneManager.LoadScene("Game 8");
+   }
+   public void Game9(){
+         SceneManager.LoadScene("Game 9");
+   }
+   public void Game10(){
+         SceneManager.LoadScene("Game 10");
+   }
 }

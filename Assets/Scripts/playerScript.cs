@@ -21,6 +21,7 @@ public class playerScript : MonoBehaviour
     public Sprite notMask;
     public GameObject explosion;
     public float velocity = 1;
+    public Spawner spawner;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -67,19 +68,25 @@ void OnCollisionEnter2D(Collision2D col){
                 Destroy(col.gameObject);
         }
     }
-
-    if (col.gameObject.CompareTag("End")){
-        losePanel.SetActive(false);
-        gameTitle.SetActive(false);
-        winPanel.SetActive(true);
-        rb.constraints = RigidbodyConstraints2D.FreezePositionY;
-    }
 }
-void OnTriggerEnter2D(Collider2D coll){
+public void OnTriggerEnter2D(Collider2D coll){
    if(coll.gameObject.CompareTag("Mask")){
                      
             sr.sprite = mask;
             Destroy(coll.gameObject);
+    }
+      if (coll.gameObject.CompareTag("End")){
+        losePanel.SetActive(false);
+        gameTitle.SetActive(false);
+        winPanel.SetActive(true);
+        rb.constraints = RigidbodyConstraints2D.FreezePositionY;
+        Instantiate(explosion, transform.position, Quaternion.identity);
+        Destroy(gameObject);
+    }
+     if(coll.gameObject.CompareTag("Spawn")){
+                     
+           FindObjectOfType<Spawner>().Spawning();
+           Debug.Log("working");
     }
 }
 }

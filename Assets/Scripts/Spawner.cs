@@ -9,12 +9,15 @@ public class Spawner : MonoBehaviour
     private int nextStep;
     public Transform startPos;
 
-    public void Update()
-    {
+    void Update(){
         while(i < 1){
             i++;
         nextStep += 7;
         Instantiate(PrefabsRoad[Random.Range(0, PrefabsRoad.Length)], new Vector3(startPos.position.x, startPos.position.y + nextStep, startPos.position.z),Quaternion.identity);
         }
+    }
+    public void Spawning()
+    {
+        i = 0;
     }
 }

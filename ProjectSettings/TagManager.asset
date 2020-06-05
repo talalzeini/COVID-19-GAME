@@ -8,6 +8,8 @@ TagManager:
   - Next
   - Mask
   - End
+  - Spawn
+  - Delete
   layers:
   - Default
   - TransparentFX
