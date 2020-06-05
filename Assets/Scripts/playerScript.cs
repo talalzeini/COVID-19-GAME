@@ -10,7 +10,7 @@ public class playerScript : MonoBehaviour
     public GameObject winPanel;
     public GameObject gameTitle;
     public Rigidbody2D rb;
-    public SpriteRenderer sr;
+    private SpriteRenderer sr;
     public Transform Cam;
     private gameManager spawnerScript;
     public GameObject tapToStartText;
@@ -21,7 +21,9 @@ public class playerScript : MonoBehaviour
     public Sprite notMask;
     public GameObject explosion;
     public float velocity = 1;
-    public Spawner spawner;
+    private Spawner spawner;
+
+    public playerScript myPlayerScript;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -66,6 +68,7 @@ void OnCollisionEnter2D(Collision2D col){
                 winPanel.SetActive(false);
                 gameTitle.SetActive(false);
                 Destroy(col.gameObject);
+                myPlayerScript.enabled = false;
         }
     }
 }
