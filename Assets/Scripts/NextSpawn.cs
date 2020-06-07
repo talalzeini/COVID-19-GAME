@@ -8,7 +8,7 @@ public class NextSpawn : MonoBehaviour
     {
         if (col.CompareTag("Player"))
         {
-            Score.score++;
+            FindObjectOfType<Spawner>().Spawning();
             Destroy(gameObject);
         }
     }

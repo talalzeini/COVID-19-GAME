@@ -89,7 +89,8 @@ public void OnTriggerEnter2D(Collider2D coll){
      if(coll.gameObject.CompareTag("Spawn")){
                      
            FindObjectOfType<Spawner>().Spawning();
-           Debug.Log("working");
+           Destroy(coll.gameObject);
+           Debug.Log("destroyed");
     }
 }
 }

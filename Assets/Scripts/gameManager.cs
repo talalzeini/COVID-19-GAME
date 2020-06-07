@@ -14,23 +14,25 @@ public class gameManager : MonoBehaviour
        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
        Time.timeScale = 1f;
    }
-   public void Back(){
-         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
-   }
-    public void Next(){
-         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-   }
    public void MenuToGame(){
        SceneManager.LoadScene("Game");
        Time.timeScale = 1f;
    }
-    public void MenuToLevels(){
-       SceneManager.LoadScene("Levels");
+    public void MenuToThemes(){
+       SceneManager.LoadScene("Themes");
+   }
+    public void MenuToOptions(){
+       SceneManager.LoadScene("Options");
    }
     public void GameToMenu(){
        SceneManager.LoadScene("Menu");
        Time.timeScale = 1f;
    }
+    public void ToMenu(){
+       SceneManager.LoadScene("Menu");
+       Time.timeScale = 1f;
+   }
+   
    public void PauseGame(){
        Time.timeScale = 0f;
        PausedPanel.SetActive(true);
