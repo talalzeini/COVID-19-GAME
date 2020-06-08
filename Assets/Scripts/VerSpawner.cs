@@ -25,6 +25,7 @@ public class VerSpawner : MonoBehaviour
         scoreText.text = highscore.ToString();
         if (PlayerPrefs.GetInt("score") <= highscore)
         {
+            
             PlayerPrefs.SetInt("score", highscore);
             highscoretext.text = PlayerPrefs.GetInt("score").ToString();
         }

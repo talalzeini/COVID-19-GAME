@@ -32,7 +32,14 @@ public class gameManager : MonoBehaviour
        SceneManager.LoadScene("Menu");
        Time.timeScale = 1f;
    }
-   
+   public void LoadVertical(){
+       SceneManager.LoadScene("Vertical");
+       Time.timeScale = 1f;
+   }
+   public void ResetGame(){
+       PlayerPrefs.DeleteAll();
+       Debug.Log("Deleted Best");
+   }
    public void PauseGame(){
        Time.timeScale = 0f;
        PausedPanel.SetActive(true);

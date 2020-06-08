@@ -144,7 +144,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &188573484
 RectTransform:
   m_ObjectHideFlags: 0
@@ -158,7 +158,7 @@ RectTransform:
   m_Children:
   - {fileID: 1662378715}
   m_Father: {fileID: 61411135}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -268,7 +268,7 @@ GameObject:
   - component: {fileID: 294227686}
   - component: {fileID: 294227685}
   m_Layer: 5
-  m_Name: 360 (1)
+  m_Name: Vertical
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -281,17 +281,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 294227683}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.01, y: 1.01, z: 1}
   m_Children:
   - {fileID: 1547506210}
-  m_Father: {fileID: 61411135}
-  m_RootOrder: 2
+  m_Father: {fileID: 566879504}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 15, y: 0}
+  m_AnchoredPosition: {x: 15.149994, y: 0}
   m_SizeDelta: {x: 596.1, y: 172.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &294227685
@@ -337,8 +337,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: TryAgain
+      - m_Target: {fileID: 515497976}
+        m_MethodName: LoadVertical
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -514,6 +514,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!224 &566879504 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 3602312458895278215, guid: a35cba6930aad488f87f243a6f0b68b1,
+    type: 3}
+  m_PrefabInstance: {fileID: 3590326960150563572}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &619498793
 GameObject:
   m_ObjectHideFlags: 0
@@ -763,7 +769,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1700822649
 RectTransform:
   m_ObjectHideFlags: 0
