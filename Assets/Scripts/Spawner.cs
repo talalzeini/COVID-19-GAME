@@ -10,24 +10,37 @@ public class Spawner : MonoBehaviour
     private int nextStep;
     public Transform startPos;
 
+    public GameObject best;
+
+    public GameObject notBest;
+
     public int score;
     public Text scoreText;
     public Text scoreText1;
     public int highscore;
+    public Text highscoretext1;
     public Text highscoretext;
 
      public void Start()
     {
         highscoretext.text = PlayerPrefs.GetInt("score", 0).ToString();
+          highscoretext1.text = PlayerPrefs.GetInt("score", 0).ToString();
+        notBest.SetActive(true);
+        best.SetActive(false);
     }
 
     void Update(){
          highscore = (int)score;
         scoreText.text = highscore.ToString();
-        if (PlayerPrefs.GetInt("score") <= highscore)
+        if (PlayerPrefs.GetInt("score") < highscore)
         {
+            notBest.SetActive(false);
+            best.SetActive(true);
+            Debug.Log("New");
             PlayerPrefs.SetInt("score", highscore);
             highscoretext.text = PlayerPrefs.GetInt("score").ToString();
+            highscoretext1.text = PlayerPrefs.GetInt("score").ToString();
+
         }
         while(i < 1){
             i++;
