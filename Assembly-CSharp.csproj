@@ -68,7 +68,6 @@
      <Compile Include="Assets\Scripts\VerSpawner.cs" />
      <Compile Include="Assets\Scripts\vertPlayer.cs" />
      <Compile Include="Assets\Scripts\Zero Rare\Retro Sound Effects\Demo\Demo.cs" />
-     <None Include="Assets\Complete Music Collection FREE Edition\readme.txt" />
      <None Include="Assets\UnityAds\link.xml" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>/Users/talalzeini/Desktop/Games/COVID-19/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
