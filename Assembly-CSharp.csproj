@@ -54,6 +54,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Music.cs" />
+     <Compile Include="Assets\OptionsManager.cs" />
      <Compile Include="Assets\Scripts\AdsManager.cs" />
      <Compile Include="Assets\Scripts\Delete.cs" />
      <Compile Include="Assets\Scripts\followPlayer.cs" />
@@ -68,6 +69,7 @@
      <Compile Include="Assets\Scripts\VerSpawner.cs" />
      <Compile Include="Assets\Scripts\vertPlayer.cs" />
      <Compile Include="Assets\Scripts\Zero Rare\Retro Sound Effects\Demo\Demo.cs" />
+     <Compile Include="Assets\ThemesManager.cs" />
      <None Include="Assets\UnityAds\link.xml" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>/Users/talalzeini/Desktop/Games/COVID-19/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>

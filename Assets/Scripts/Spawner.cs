@@ -14,7 +14,7 @@ public class Spawner : MonoBehaviour
 
     public GameObject notBest;
 
-    public int score;
+    public float score;
     public Text scoreText;
     public Text scoreText1;
     public int highscore;
@@ -51,10 +51,9 @@ public class Spawner : MonoBehaviour
     public void Spawning()
     {
             i = 0;
-            score++;
+            score+=0.5f;
             Debug.Log("yes");
             scoreText.text = score.ToString();
-            scoreText1.text = score.ToString();
     }
 }
     

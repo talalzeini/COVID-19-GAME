@@ -1565,7 +1565,7 @@ AudioSource:
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 0
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -1618,7 +1618,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -2069,12 +2069,12 @@ PrefabInstance:
     - target: {fileID: 8388033157832324934, guid: cbe9c95a5cb6642ab9b60dbdeb3567a7,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.32449996
+      value: 0.1925
       objectReference: {fileID: 0}
     - target: {fileID: 8388033157832324934, guid: cbe9c95a5cb6642ab9b60dbdeb3567a7,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.112
+      value: 4.22
       objectReference: {fileID: 0}
     - target: {fileID: 8388033157832324934, guid: cbe9c95a5cb6642ab9b60dbdeb3567a7,
         type: 3}
@@ -2124,12 +2124,12 @@ PrefabInstance:
     - target: {fileID: 8388033157832324934, guid: cbe9c95a5cb6642ab9b60dbdeb3567a7,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 16.5
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 8388033157832324934, guid: cbe9c95a5cb6642ab9b60dbdeb3567a7,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.11000001
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 8388033157832324934, guid: cbe9c95a5cb6642ab9b60dbdeb3567a7,
         type: 3}
@@ -2141,6 +2141,12 @@ PrefabInstance:
       propertyPath: m_Constraints
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 2627709879747137784, guid: cbe9c95a5cb6642ab9b60dbdeb3567a7,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ef03259c68de0413b89efccd2f1ffe6a,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cbe9c95a5cb6642ab9b60dbdeb3567a7, type: 3}
 --- !u!1 &311753630
@@ -2488,13 +2494,13 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: fee720767c8b9d849953664fa4a40c17, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.15
   m_Pitch: 1
   Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 230
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500

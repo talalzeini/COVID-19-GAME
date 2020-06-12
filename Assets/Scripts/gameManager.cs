@@ -8,13 +8,12 @@ public class gameManager : MonoBehaviour
   public GameObject PausedPanel;
   public GameObject losePanel;
   public GameObject muteButton;
-    public GameObject unmuteButton;
+  public GameObject unmuteButton;
   public AudioSource lose;
 
   private playerScript player;
 
   public GameObject PauseIcon;
-
 
   public void Start(){
       if(AudioListener.volume == 1f){
@@ -51,10 +50,11 @@ public class gameManager : MonoBehaviour
        SceneManager.LoadScene("Vertical");
        Time.timeScale = 1f;
    }
-   public void ResetGame(){
-       PlayerPrefs.DeleteAll();
-       Debug.Log("Deleted Best");
-   }
+  
+
+public void ResetGame(){
+       PlayerPrefs.DeleteAll();     
+}
    public void Mute(){
        muteButton.SetActive(false);
        AudioListener.volume = 0f;
