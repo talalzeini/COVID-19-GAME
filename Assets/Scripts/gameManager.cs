@@ -11,11 +11,15 @@ public class gameManager : MonoBehaviour
   public GameObject unmuteButton;
   public AudioSource lose;
 
+
+  public GameObject adsPanel;
   private playerScript player;
 
   public GameObject PauseIcon;
 
   public void Start(){
+      adsPanel.SetActive(false);
+      losePanel.SetActive(false);
       if(AudioListener.volume == 1f){
           muteButton.SetActive(true);
         unmuteButton.SetActive(false);
@@ -79,6 +83,14 @@ public void ResetGame(){
        PausedPanel.SetActive(false);
        PauseIcon.SetActive(true);
    }
+   public void ShowingAdvertisements(){
+        losePanel.SetActive(false);
+        adsPanel.SetActive(true);
+    }
+    public void NoThanks(){
+        losePanel.SetActive(true);
+        adsPanel.SetActive(false);
+    }
    public void Update(){    
        if(losePanel.activeSelf == true){
             lose.enabled = true;

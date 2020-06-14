@@ -4,11 +4,14 @@ using UnityEngine.Advertisements;
 
 public class AdsManager : MonoBehaviour, IUnityAdsListener
 {
+    public GameObject AdsArePlaying;
     string id = "3629453";
-      string myPlacementId = "rewardedVideo";
- void Start(){
+    string myPlacementId = "rewardedVideo";
+
+ public void StartAds(){
       Advertisement.AddListener (this);
       Advertisement.Initialize(id, true);
+      AdsArePlaying.SetActive(true);
   }
 public void ShowingAds(){
  Advertisement.Show();
