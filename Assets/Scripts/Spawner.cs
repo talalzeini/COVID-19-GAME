@@ -22,6 +22,7 @@ public class Spawner : MonoBehaviour
     public Text highscoretext1;
     public Text highscoretext;
 
+
     public GameObject adsArePlaying;
 
      public void Start()
@@ -36,6 +37,7 @@ public class Spawner : MonoBehaviour
       
          highscore = (int)score;
         scoreText.text = highscore.ToString();
+        scoreText1.text = highscore.ToString();
                
                
         
@@ -46,6 +48,7 @@ public class Spawner : MonoBehaviour
             PlayerPrefs.SetInt("score", highscore);
             highscoretext.text = (int.Parse(highscoretext.text)).ToString();
             highscoretext1.text = PlayerPrefs.GetInt("score").ToString();
+            
 
             
         }else if (!(PlayerPrefs.GetInt("score") < highscore) && (adsArePlaying.activeSelf)){
@@ -66,6 +69,7 @@ public class Spawner : MonoBehaviour
             score+=0.5f;
             Debug.Log("yes");
             scoreText.text = score.ToString();
+            scoreText1.text = score.ToString();
     }
     public void NewScore(){
         while(number<1){

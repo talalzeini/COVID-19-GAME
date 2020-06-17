@@ -6,11 +6,17 @@ using UnityEngine.SceneManagement;
 public class gameManager : MonoBehaviour
 {
   public GameObject PausedPanel;
+  public GameObject bg;
   public GameObject losePanel;
   public GameObject muteButton;
   public GameObject unmuteButton;
-  public AudioSource lose;
 
+
+  public static bool isCalled = false;
+  public GameObject muteMusic;
+  public GameObject unmuteMusic;
+
+  public AudioSource lose;
 
   public GameObject adsPanel;
   private playerScript player;
@@ -20,13 +26,7 @@ public class gameManager : MonoBehaviour
   public void Start(){
       adsPanel.SetActive(false);
       losePanel.SetActive(false);
-      if(AudioListener.volume == 1f){
-          muteButton.SetActive(true);
-        unmuteButton.SetActive(false);
-      }else if((AudioListener.volume == 0f)){
-        unmuteButton.SetActive(true);
-        muteButton.SetActive(false);
-      }
+       
   }
   public void TryAgain(){
        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
@@ -64,15 +64,34 @@ public void ResetGame(){
        AudioListener.volume = 0f;
        unmuteButton.SetActive(true);
        AudioListener.pause = true;
-       Debug.Log("Muted");
    }
    public void UnMute(){
        muteButton.SetActive(true);
        AudioListener.volume = 1f;
        unmuteButton.SetActive(false);
        AudioListener.pause = false;
-       Debug.Log("UnMuted");
    }
+
+
+   public void MuteMusic(){
+       muteMusic.SetActive(false);
+       Destroy(GameObject.Find("Background Music"));
+        Destroy(GameObject.Find("Background Music(Clone)"));
+       unmuteMusic.SetActive(true);
+       isCalled = true;
+   }
+   public void UnMuteMusic(){
+       muteMusic.SetActive(true);
+       isCalled = false;
+       unmuteMusic.SetActive(false);
+       Instantiate(bg, transform.position, Quaternion.identity);
+   }
+
+
+
+
+
+
    public void PauseGame(){
        Time.timeScale = 0f;
        PausedPanel.SetActive(true);
@@ -94,6 +113,10 @@ public void ResetGame(){
    public void Update(){    
        if(losePanel.activeSelf == true){
             lose.enabled = true;
+
+   }
+    if(isCalled){
+    Destroy(GameObject.Find("Background Music"));
     }
    }
 }

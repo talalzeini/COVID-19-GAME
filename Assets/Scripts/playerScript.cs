@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 public class playerScript : MonoBehaviour
 {
     public AudioSource jump;
+
+    public AudioSource plusOne;
     public GameObject losePanel;
     public GameObject winPanel;
     public GameObject gameTitle;
@@ -90,7 +92,7 @@ public void OnTriggerEnter2D(Collider2D coll){
                      
            FindObjectOfType<Spawner>().Spawning();
            Destroy(coll.gameObject);
-           Debug.Log("destroyed");
+           plusOne.Play();
     }
 }
 }

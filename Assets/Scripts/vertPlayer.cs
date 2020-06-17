@@ -5,6 +5,7 @@ using UnityEngine;
 public class vertPlayer : MonoBehaviour
 {
     
+     public AudioSource plusOne;
      public AudioSource jump;
     public GameObject losePanel;
     public GameObject winPanel;
@@ -25,7 +26,11 @@ public class vertPlayer : MonoBehaviour
 
     public float mapWidth;
 
+    public GameObject spawnerToDestroy;
+
     public float moveSpeed = 5f;
+
+
 
     public vertPlayer myPlayerScript;
     void Start()
@@ -37,6 +42,7 @@ public class vertPlayer : MonoBehaviour
         losePanel.SetActive(false);
         winPanel.SetActive(false);
         gameTitle.SetActive(true);
+        spawnerToDestroy.SetActive(false);
     }
      public void FixedUpdate()
     {
@@ -45,10 +51,14 @@ public class vertPlayer : MonoBehaviour
 
         Vector2 newPosition = rb.position + Vector2.right * x;
         newPosition.x = Mathf.Clamp(newPosition.x, -mapWidth, mapWidth);
+
+        if(x != 0){
         rb.MovePosition(newPosition);
         tapToStartText.SetActive(false);
         fight0.SetActive(true);
         fight1.SetActive(false);
+        spawnerToDestroy.SetActive(true);
+        }
 
     }
 
@@ -62,6 +72,7 @@ void OnCollisionEnter2D(Collision2D col){
       //  rb.constraints = RigidbodyConstraints2D.None;
             if (col.gameObject.CompareTag("Corona")){
                 losePanel.SetActive(true);
+                Destroy(spawnerToDestroy);
                 winPanel.SetActive(false);
                 gameTitle.SetActive(false);
                 Destroy(col.gameObject);
@@ -86,9 +97,9 @@ public void OnTriggerEnter2D(Collider2D coll){
     }
      if(coll.gameObject.CompareTag("Spawn")){
            
-           Debug.Log("this working");
            FindObjectOfType<VerSpawner>().SpawningVert();
            Destroy(coll.gameObject);
+           plusOne.Play();
     }
 }
 }
